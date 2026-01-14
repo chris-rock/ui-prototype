@@ -8,9 +8,7 @@ import {
   useState,
   type ReactNode,
 } from "react";
-
-// Check if auth is disabled for development
-const DISABLE_AUTH = process.env.NEXT_PUBLIC_DISABLE_AUTH === "true";
+import { AUTH_PROVIDER } from "@/lib/config/env";
 
 // Simplified User type for both mock and real usage
 export type User = {
@@ -360,10 +358,10 @@ function FirebaseAuthProvider({ children }: AuthProviderProps) {
 
 /**
  * Authentication provider that manages auth state.
- * Uses mock data when NEXT_PUBLIC_DISABLE_AUTH=true
+ * Uses mock data when AUTH_PROVIDER is "development"
  */
 export function AuthProvider({ children }: AuthProviderProps) {
-  if (DISABLE_AUTH) {
+  if (AUTH_PROVIDER === "development") {
     return <MockAuthProvider>{children}</MockAuthProvider>;
   }
   return <FirebaseAuthProvider>{children}</FirebaseAuthProvider>;
