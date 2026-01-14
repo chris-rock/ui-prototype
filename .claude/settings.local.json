@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git config:*)",
+      "Bash(ls:*)",
+      "Bash(npx create-next-app:*)",
+      "Bash(pnpm add:*)",
+      "Bash(pnpm build:*)",
+      "Bash(find:*)",
+      "Bash(node -e:*)",
+      "Bash(npm run build:*)",
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nInitial commit: Mondoo UI v2\n\nComplete redesign of Mondoo security platform using:\n- Next.js 14+ with App Router\n- Tailwind CSS 4\n- Headless UI components\n- Apollo Client for GraphQL\n- TanStack Table for data tables\n\nFeatures implemented:\n- Authentication system \\(Firebase\\) with dev bypass mode\n- Dashboard layouts \\(main, space, organization\\)\n- Findings management \\(CVEs, Advisories, Checks\\)\n- Asset inventory with detail pages\n- Triage toolbar for bulk actions\n- Exception management\n- Command palette \\(Cmd+K\\)\n- Responsive sidebar navigation\n\nRoutes:\n- /dashboard - Main dashboard\n- /space/[spaceId] - Space dashboard\n- /space/[spaceId]/findings - Findings list\n- /space/[spaceId]/findings/cve/[cveId] - CVE detail\n- /space/[spaceId]/inventory - Assets and software\n- /space/[spaceId]/inventory/asset/[assetId] - Asset detail\n- /org/[orgId] - Organization dashboard\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")"
+    ]
+  }
+}

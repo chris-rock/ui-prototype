@@ -1,0 +1,207 @@
+@import "tailwindcss";
+
+/* Mondoo Design System Tokens */
+:root {
+  /* Background */
+  --background: #ffffff;
+  --foreground: #171717;
+
+  /* Primary */
+  --color-primary: #9147FF;
+  --color-primary-light: #A07AFF;
+  --color-primary-dark: #5000C1;
+  --color-primary-darker: #3F137C;
+
+  /* Secondary */
+  --color-secondary: #4C35E8;
+  --color-secondary-light: #8797FF;
+  --color-secondary-lighter: #CCD3FF;
+  --color-secondary-dark: #2A15B7;
+  --color-secondary-darker: #19105C;
+
+  /* Severity Colors */
+  --color-critical: #FC3779;
+  --color-critical-light: #FD6094;
+  --color-critical-dark: #DF074F;
+
+  --color-high: #CF2584;
+  --color-high-light: #DD519F;
+  --color-high-dark: #BA2177;
+
+  --color-medium: #039CD8;
+  --color-medium-light: #33C3FB;
+  --color-medium-dark: #0278A6;
+
+  --color-low: #2CBFC9;
+  --color-low-light: #5FD4DB;
+  --color-low-dark: #167C83;
+
+  --color-none: #2FC089;
+  --color-none-light: #6CD9AF;
+  --color-none-dark: #238B66;
+
+  --color-unknown: #CCCCCC;
+  --color-unknown-light: #D9D9D9;
+  --color-unknown-dark: #696969;
+
+  /* Score Rating Colors */
+  --color-fail: #FC3779;
+  --color-poor: #CF2584;
+  --color-fair: #039CD8;
+  --color-good: #2CBFC9;
+  --color-excellent: #2FC089;
+
+  /* Status Colors */
+  --color-success: #2FC089;
+  --color-success-light: #6CD9AF;
+  --color-success-dark: #238B66;
+
+  --color-warning: #FBD153;
+  --color-warning-light: #FFED9F;
+  --color-warning-dark: #755800;
+
+  --color-error: #FF5252;
+  --color-error-light: #FF7070;
+  --color-error-lighter: #FFCBCB;
+  --color-error-dark: #4F0808;
+
+  --color-error-scan: #FF7849;
+  --color-error-scan-light: #FE936E;
+  --color-error-scan-dark: #A42A00;
+
+  /* Neutral */
+  --color-gray-50: #FAFAFA;
+  --color-gray-100: #F5F5F5;
+  --color-gray-200: #EEEEEE;
+  --color-gray-300: #E0E0E0;
+  --color-gray-400: #BDBDBD;
+  --color-gray-500: #9E9E9E;
+  --color-gray-600: #757575;
+  --color-gray-700: #616161;
+  --color-gray-800: #424242;
+  --color-gray-900: #212121;
+}
+
+/* Dark mode */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+/* Tailwind 4 Theme Configuration */
+@theme inline {
+  /* Fonts */
+  --font-sans: "Inter", "Roboto", "San Francisco", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", "Fira Code", monospace;
+
+  /* Colors */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  /* Primary palette */
+  --color-primary-DEFAULT: var(--color-primary);
+  --color-primary-light: var(--color-primary-light);
+  --color-primary-dark: var(--color-primary-dark);
+  --color-primary-darker: var(--color-primary-darker);
+
+  /* Secondary palette */
+  --color-secondary-DEFAULT: var(--color-secondary);
+  --color-secondary-light: var(--color-secondary-light);
+  --color-secondary-lighter: var(--color-secondary-lighter);
+  --color-secondary-dark: var(--color-secondary-dark);
+  --color-secondary-darker: var(--color-secondary-darker);
+
+  /* Severity colors */
+  --color-critical-DEFAULT: var(--color-critical);
+  --color-critical-light: var(--color-critical-light);
+  --color-critical-dark: var(--color-critical-dark);
+
+  --color-high-DEFAULT: var(--color-high);
+  --color-high-light: var(--color-high-light);
+  --color-high-dark: var(--color-high-dark);
+
+  --color-medium-DEFAULT: var(--color-medium);
+  --color-medium-light: var(--color-medium-light);
+  --color-medium-dark: var(--color-medium-dark);
+
+  --color-low-DEFAULT: var(--color-low);
+  --color-low-light: var(--color-low-light);
+  --color-low-dark: var(--color-low-dark);
+
+  --color-none-DEFAULT: var(--color-none);
+  --color-none-light: var(--color-none-light);
+  --color-none-dark: var(--color-none-dark);
+
+  --color-unknown-DEFAULT: var(--color-unknown);
+  --color-unknown-light: var(--color-unknown-light);
+  --color-unknown-dark: var(--color-unknown-dark);
+
+  /* Score colors */
+  --color-score-fail: var(--color-fail);
+  --color-score-poor: var(--color-poor);
+  --color-score-fair: var(--color-fair);
+  --color-score-good: var(--color-good);
+  --color-score-excellent: var(--color-excellent);
+
+  /* Status colors */
+  --color-success-DEFAULT: var(--color-success);
+  --color-success-light: var(--color-success-light);
+  --color-success-dark: var(--color-success-dark);
+
+  --color-warning-DEFAULT: var(--color-warning);
+  --color-warning-light: var(--color-warning-light);
+  --color-warning-dark: var(--color-warning-dark);
+
+  --color-error-DEFAULT: var(--color-error);
+  --color-error-light: var(--color-error-light);
+  --color-error-lighter: var(--color-error-lighter);
+  --color-error-dark: var(--color-error-dark);
+}
+
+/* Base styles */
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+}
+
+/* Focus ring styles */
+*:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-gray-100);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-gray-400);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-gray-500);
+}
+
+@media (prefers-color-scheme: dark) {
+  ::-webkit-scrollbar-track {
+    background: var(--color-gray-800);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-gray-600);
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-gray-500);
+  }
+}
