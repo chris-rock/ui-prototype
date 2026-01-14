@@ -26,7 +26,7 @@ export const DATADOG_CLIENT_TOKEN = process.env.NEXT_PUBLIC_DATADOG_CLIENT_TOKEN
 
 // Auth Provider Selection
 export type AuthProvider = "firebase" | "oidc" | "development";
-export const AUTH_PROVIDER: AuthProvider = (process.env.NEXT_PUBLIC_AUTH_PROVIDER as AuthProvider) || "firebase";
+export const AUTH_PROVIDER: AuthProvider = (process.env.NEXT_PUBLIC_AUTH_PROVIDER as AuthProvider) || "development";
 
 // Session Configuration
 export const SESSION_MAX_DURATION = parseInt(process.env.NEXT_PUBLIC_SESSION_MAX_DURATION || "3600000", 10);
